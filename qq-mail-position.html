@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+    }
+
+    html {
+      min-width: 500px;
+    }
+
+    div {
+      border: 1px solid #000;
+      box-sizing: border-box;
+    }
+
+    .header {
+      position: fixed;
+      height: 100px;
+      width: 100%;
+    }
+
+    .body {
+      position: relative;
+      top: 100px;
+      height: calc(100vh - 100px);
+    }
+
+    .left {
+      position: relative;
+      width: 180px;
+      height: 100%;
+    }
+
+    .main {
+      position: absolute;
+      xleft: 180px;
+      /**/
+      xtop: 0;
+      /**/
+      width: calc(100% - 180px);
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header"></div>
+  <div class="body">
+    <div class="left"></div>
+    <div class="main"></div>
+  </div>
+</body>
+
+</html>

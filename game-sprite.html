@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .tra {
+      height: 100px;
+      width: 100px;
+      background-color: #cccccc;
+      transition: width .5s 0s, height .5s 1s;
+    }
+
+    .tra:hover {
+      height: 200px;
+      width: 200px;
+    }
+
+    .mon {
+      width: 70px;
+      height: 60px;
+      background-position: 0 -60px;
+      background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575340707013&di=fed5eb38a96b1ba2a77775a8e12e7066&imgtype=jpg&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D3333033154%2C728098133%26fm%3D214%26gp%3D0.jpg);
+      animation: monkey1 .35s steps(5) infinite, monkey2 .35s steps(5) .35s infinite, monkey3 .3s steps(4) .7s infinite;
+    }
+
+    @keyframes monkey1 {
+      from {
+        background-position: 0 0;
+      }
+
+      to {
+        background-position: -350px 0;
+      }
+    }
+
+    @keyframes monkey2 {
+      from {
+        background-position: 0px -60px;
+      }
+
+      to {
+        background-position: -350px -60px;
+      }
+    }
+
+    @keyframes monkey3 {
+      from {
+        background-position: 0px -120px;
+      }
+
+      to {
+        background-position: -280px -120px;
+      }
+    }
+
+    .test {
+      height: 60px;
+      width: 70px;
+      background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575340707013&di=fed5eb38a96b1ba2a77775a8e12e7066&imgtype=jpg&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D3333033154%2C728098133%26fm%3D214%26gp%3D0.jpg) 0px 0px;
+      animation: monkey1 .5s steps(5) infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tra"></div>
+  <div class="mon"></div>
+  <div class="test"></div>
+  <input type="checkbox" name="" id="t">
+  <label class="twt" for="t"></label>
+  <style>
+    input {
+      display: none;
+    }
+
+    .twt {
+      display: inline-block;
+      height: 100px;
+      width: 100px;
+      background: url(https://effect.va666.com/41237/images/web_heart_animation.png) 0px 0px;
+    }
+
+    input:checked+label {
+      background-position: -2800px 0;
+      transition: 1s steps(28);
+    }
+  </style>
+</body>
+
+</html>

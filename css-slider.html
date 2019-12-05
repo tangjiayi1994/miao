@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    body>div {
+      width: 613px;
+      height: 230px;
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    input {
+      display: none;
+    }
+
+    .bottom {
+      margin: 3px;
+      position: relative;
+      display: inline-block;
+      top: calc(100% - 30px);
+      left: calc(100% - 100px);
+      width: 6px;
+      height: 6px;
+      background: rgb(0, 0, 0, 40%);
+      border: 2px solid hsl(0, 0%, 100%, 30%);
+      /* hsl(0, 0%, 98%, 20%) */
+      border-radius: 10px;
+      z-index: 5;
+    }
+
+    img {
+      width: 613px;
+      height: 230px;
+      position: absolute;
+      display: inline-block;
+      left: 100%;
+      top: 0;
+      transition: .5s;
+    }
+
+    input:checked+.bottom+.left+.right+img {
+      left: 0;
+    }
+
+    input:checked+.bottom {
+      background: hsl(0, 0%, 50%, 20%);
+      border-color: hsl(0, 0%, 0%, 40%);
+    }
+
+    .bottom:hover {
+      background: hsl(0, 0%, 50%, 20%);
+      border-color: hsl(0, 0%, 0%, 40%);
+
+    }
+  </style>
+  <div>
+    <input type="radio" name="slider" checked id="a">
+    <label class="bottom" for="a"></label>
+    <label class="left" for="e"></label>
+    <label class="right" for="b"></label>
+    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5a0b5c060d5f887cdb555aa56d6ca61e.jpg?w=2452&h=920" alt="">
+    <input type="radio" name="slider" id="b">
+    <label class="bottom" for="b"></label>
+    <label class="left" for="a"></label>
+    <label class="right" for="c"></label>
+    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ad84d80e7fc5990162a387a6b103af01.jpeg?w=2452&h=920" alt="">
+    <input type="radio" name="slider" id="c">
+    <label class="bottom" for="c"></label>
+    <label class="left" for="b"></label>
+    <label class="right" for="d"></label>
+    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e4405ac413e1c3bcb78e1218df82a9e2.jpg?w=2452&h=920" alt="">
+    <input type="radio" name="slider" id="d">
+    <label class="bottom" for="d"></label>
+    <label class="left" for="c"></label>
+    <label class="right" for="e"></label>
+    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e52c3e98602b90f198ec316dce253cba.jpg?w=2452&h=920" alt="">
+    <input type="radio" name="slider" id="e">
+    <label class="bottom" for="e"></label>
+    <label class="left" for="d"></label>
+    <label class="right" for="a"></label>
+    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/05bc8af40fc9f9941808d253034c279d.jpg?w=2452&h=920" alt="">
+
+    <style>
+      .left,
+      .right {
+        position: absolute;
+        display: inline-block;
+        height: 70px;
+        width: 41px;
+        top: calc(50% - 35px);
+        opacity: 1;
+        z-index: 3;
+        background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+      }
+
+      .left {
+        left: 0;
+        background-position: -84px 0px;
+      }
+
+      .right {
+        right: 0;
+        background-position: -125px 0px;
+      }
+
+      .left:hover {
+        background-position-x: 0px;
+      }
+
+      .right:hover {
+        background-position-x: -42px;
+      }
+
+      input:checked+.bottom+.left,
+      input:checked+.bottom+.left+.right {
+        z-index: 5;
+      }
+    </style>
+  </div>
+</body>
+
+</html>

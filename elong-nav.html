@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <nav>
+      <ul>
+        <li>首页</li>
+        <li>酒店</li>
+        <li data-tip="低价促">火车票</li>
+        <li data-tip="新升级">汽车票</li>
+      </ul>
+    </nav>
+  </div>
+  <style>
+    .wrap {
+      background-color: #2064c8;
+    }
+
+    nav {
+      margin: auto;
+      width: 600px;
+    }
+
+    ul {
+      list-style: none;
+      background-color: #2064cb;
+      color: white;
+      font-size: 0;
+    }
+
+    li {
+      font-size: 16px;
+      position: relative;
+      display: inline-block;
+      border-left: 1px solid #3774c1;
+      padding: 13px;
+    }
+
+    li:last-child {
+      border-right: 1px solid #3774c1;
+    }
+
+    [data-tip]::before {
+      content: attr(data-tip);
+      color: white;
+      position: absolute;
+      white-space: nowrap;
+      font-size: 8px;
+      left: 50px;
+      bottom: 40px;
+      background-color: #ff8e00;
+      z-index: 10;
+    }
+
+    [data-tip]::after {
+      content: "";
+      position: absolute;
+      left: 54px;
+      bottom: 36px;
+      z-index: 10;
+      border: 2px solid;
+      border-color: #ff8e00 transparent transparent #ff8e00;
+    }
+  </style>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="checkbox" name="" id="ckb">
+  <label class="ios" for="ckb"></label>
+  <style>
+    input {
+      display: none;
+    }
+
+    label.ios {
+      position: relative;
+      display: inline-block;
+      width: 210px;
+      height: 120px;
+      box-sizing: border-box;
+      border: 2px solid #cbcacb;
+      border-radius: 9999px;
+      background-color: white;
+      transition: .3s;
+    }
+
+    /* 30f34d */
+
+    label.ios::before {
+      background-color: white;
+      content: "";
+      width: 110px;
+      height: 110px;
+      border-radius: 9999px;
+      position: absolute;
+      box-shadow: 0px 7px 20px rgba(0, 0, 0, .5);
+      left: 5px;
+      top: 3px;
+      transition: .3s;
+    }
+
+    #ckb:checked+label.ios {
+      box-shadow: inset 31px 0px 0px 60px #30f34d;
+      border: #30f34d;
+      transition: .3s;
+    }
+
+    #ckb:checked+label.ios::before {
+      left: 93px;
+    }
+  </style>
+  <input type="radio" name="rdb" id="a">
+  <label class="lbr" for="a"></label>
+  <input type="radio" name="rdb" id="b">
+  <label class="lbr" for="b"></label>
+  <input type="radio" name="rdb" id="c">
+  <label class="lbr" for="c"></label>
+  <style>
+    .lbr {
+      display: inline-block;
+      position: relative;
+      height: 100px;
+      width: 100px;
+      border-radius: 99px;
+      border: 5px solid #000;
+    }
+
+    .lbr::before {
+      position: absolute;
+      content: "";
+      height: 0px;
+      width: 0px;
+      border-radius: 99px;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background-color: #03c160;
+      transition: .5s;
+    }
+
+    .lbr::after {
+      position: absolute;
+      content: "";
+      height: 0px;
+      width: 0px;
+      border-radius: 99px;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin-left: -50%;
+      margin-top: -50%;
+      transition: .5s;
+      background-color: rgba(3, 193, 96, .5);
+    }
+
+    .lbr:active.lbr::after {
+      height: 150px;
+      width: 150px;
+    }
+
+    input[type="radio"]:checked+label.lbr::before {
+      height: 65px;
+      width: 65px;
+    }
+
+    input[type="radio"]:checked+label.lbr {
+      border-color: #03c160;
+    }
+  </style>
+</body>
+
+</html>

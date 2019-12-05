@@ -45,14 +45,15 @@
       width: 613px;
       height: 230px;
       position: absolute;
-      display: inline-block;
-      left: 100%;
+      left: 0;
       top: 0;
       transition: .5s;
+      opacity: 0;
     }
 
     input:checked+.bottom+.left+.right+img {
-      left: 0;
+      opacity: 1;
+      z-index: 1;
     }
 
     input:checked+.bottom {

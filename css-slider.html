@@ -64,7 +64,39 @@
     .bottom:hover {
       background: hsl(0, 0%, 50%, 20%);
       border-color: hsl(0, 0%, 0%, 40%);
+    }
 
+    .left,
+    .right {
+      position: absolute;
+      height: 70px;
+      width: 41px;
+      top: calc(50% - 35px);
+      z-index: 3;
+      background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+    }
+
+    .left {
+      left: 0;
+      background-position: -84px 0px;
+    }
+
+    .right {
+      right: 0;
+      background-position: -124px 0px;
+    }
+
+    .left:hover {
+      background-position-x: 0px;
+    }
+
+    .right:hover {
+      background-position-x: -42px;
+    }
+
+    input:checked+.bottom+.left,
+    input:checked+.bottom+.left+.right {
+      z-index: 5;
     }
   </style>
   <div>
@@ -93,43 +125,6 @@
     <label class="left" for="d"></label>
     <label class="right" for="a"></label>
     <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/05bc8af40fc9f9941808d253034c279d.jpg?w=2452&h=920" alt="">
-
-    <style>
-      .left,
-      .right {
-        position: absolute;
-        display: inline-block;
-        height: 70px;
-        width: 41px;
-        top: calc(50% - 35px);
-        opacity: 1;
-        z-index: 3;
-        background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
-      }
-
-      .left {
-        left: 0;
-        background-position: -84px 0px;
-      }
-
-      .right {
-        right: 0;
-        background-position: -125px 0px;
-      }
-
-      .left:hover {
-        background-position-x: 0px;
-      }
-
-      .right:hover {
-        background-position-x: -42px;
-      }
-
-      input:checked+.bottom+.left,
-      input:checked+.bottom+.left+.right {
-        z-index: 5;
-      }
-    </style>
   </div>
 </body>
 

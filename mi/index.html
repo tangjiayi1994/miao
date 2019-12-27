@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    @font-face {
+      font-family: iconfont;
+      src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format("woff");
+      font-weight: 400
+    }
+
+    [class*=iconfont] {
+      font-family: iconfont !important;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke-width: .2px;
+      -moz-osx-font-smoothing: grayscale
+    }
+
+    .iconfont-cart:before {
+      content: "\E60C";
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-width: 1226px;
+    }
+
+    ul,
+    ul>* {
+      list-style: none;
+    }
+
+    .wok {
+      width: 1226px;
+      margin: auto;
+    }
+
+    .top {
+      background-color: #333333;
+      color: #b0b0b0;
+      line-height: 40px;
+      position: relative;
+    }
+
+    .top-title {
+      height: 40px;
+      width: 1226px;
+      margin: auto;
+      font-size: 12px;
+    }
+
+    .left-top {
+      float: left;
+    }
+
+    .right-top {
+      float: right;
+    }
+
+    .top-title a {
+      display: inline-block;
+      color: #b0b0b0;
+      text-decoration: none;
+      padding: 0 3px;
+    }
+
+    .top-title a:hover {
+      color: white;
+    }
+
+    .user span:nth-child(even),
+    .left-top span:nth-child(even) {
+      color: #424242;
+    }
+
+    div.user,
+    div.shop-car {
+      display: inline-block;
+      padding: 0 1em;
+    }
+
+    div.shop-car {
+      background-color: #424242;
+      position: relative;
+      transition: 0s .6s;
+    }
+
+    div.shop-car span {
+      transition: 0s .6s;
+    }
+
+    div.shop-car span::before {
+      font-size: 20px;
+      line-height: 20px;
+      vertical-align: -4px;
+    }
+
+    .download-app {
+      position: relative;
+      padding-bottom: 1px;
+    }
+
+    div.shop-car:hover span {
+      color: #ff6700;
+      transition: 0s;
+    }
+
+    div.shop-car span::after {
+      display: inline-block;
+      position: relative;
+      content: ' (0) ';
+    }
+
+    div.shop-car::before {
+      display: inline-block;
+      line-height: 100px;
+      text-align: center;
+      content: '购物车中还没有商品，赶紧选购吧！';
+      position: absolute;
+      width: 316px;
+      height: 0px;
+      top: 40px;
+      right: 0;
+      margin: auto;
+      color: black;
+      overflow: hidden;
+      background-color: #fff;
+      transition: .2s .3s;
+      overflow: hidden;
+      z-index: 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+    }
+
+    div.shop-car:hover:before {
+      height: 100px;
+      transition: .3s;
+      z-index: 20;
+    }
+
+    div.shop-car:hover {
+      background-color: white;
+      transition: 0s;
+    }
+
+    .download-app>div {
+      position: absolute;
+      overflow: hidden;
+      margin-top: 1px;
+      width: 124px;
+      height: 0px;
+      left: -50%;
+      top: 40px;
+      box-shadow: 0 1px 5px #aaa;
+      transition: .5s;
+      background-color: #fff;
+      z-index: 0;
+    }
+
+    .download-app:hover>div {
+      height: 150px;
+      z-index: 60;
+    }
+
+    .download-app>div::before {
+      content: '';
+      position: absolute;
+      background: url(https://i1.mifile.cn/f/i/17/appdownload/download.png?1);
+      background-size: contain;
+      width: 90px;
+      height: 90px;
+      top: 17px;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+
+    .download-app>div::after {
+      content: '小米商城APP';
+      position: absolute;
+      width: 90px;
+      height: 43px;
+      line-height: 43px;
+      margin: auto;
+      top: 103px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: black;
+    }
+
+    .download-app::before {
+      content: '';
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      width: 0px;
+      height: 0px;
+      border: 8px solid;
+      border-color: transparent;
+    }
+
+    .download-app:hover::before {
+      border-bottom-color: white;
+    }
+
+    .hlg-emp-sch {
+      position: relative;
+      height: 100px;
+      line-height: 100px;
+    }
+
+    .hlg-emp-sch>div {
+      width: 1226px;
+      margin: auto;
+    }
+
+    .home-logo {
+      width: 55px;
+      height: 55px;
+      position: relative;
+      background-color: #ff6700;
+      overflow: hidden;
+      z-index: 5;
+      float: left;
+      margin-top: 22px;
+    }
+
+    .home-logo::before {
+      left: -100%;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: url(https://s02.mifile.cn/assets/static/image/mi-home.png) no-repeat;
+      background-size: contain;
+      transition: .2s;
+    }
+
+    .home-logo::after {
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: url(https://s02.mifile.cn/assets/static/image/mi-logo.png) no-repeat;
+      background-size: contain;
+      transition: .2s;
+    }
+
+    .home-logo:hover::after {
+      left: 100%;
+    }
+
+    .home-logo:hover::before {
+      left: 0;
+    }
+
+    .emp>.sp {
+      float: left;
+      width: 181px;
+      height: 100px;
+    }
+
+    .emp {
+      float: left;
+      width: 850px;
+      margin: 0;
+      padding: 0;
+      height: 100px;
+      font-size: 0;
+    }
+
+    .have-manu {
+      font-size: 0;
+      padding: 0;
+    }
+
+    .emp li>a {
+      color: black;
+      transition: .3s 0s;
+      text-decoration: none;
+      margin: auto;
+      padding: 39.5px 10px;
+      font-size: 16px;
+    }
+
+    .emp>li,
+    .emp>ul {
+      float: left;
+      height: 100px;
+    }
+
+    .have-manu>li:hover>a,
+    .heresy:hover>a {
+      color: #ff6700;
+    }
+
+    .have-manu a span::before {
+      position: absolute;
+      width: 500px;
+      height: 39.5px;
+      top: 61.5px;
+      left: calc(50% - 250px);
+      z-index: 10;
+    }
+
+    .have-manu a:hover span::before {
+      content: '';
+    }
+
+    .have-manu>li {
+      float: left;
+      height: 100px;
+    }
+
+    .have-manu>li:hover .allwidth {
+      z-index: 50;
+      height: 230px;
+      transition: height .3s .3s, box-shadow 0s .3s, border-top-width 0s .3s, z-index 0s;
+      box-shadow: 0 3px 4px rgba(0, 0, 0, .18);
+    }
+
+    .have-manu:hover .allwidth {
+      height: 230px;
+      border-top: 1px solid #e0e0e0;
+      transition: height .3s .3s, box-shadow 0s .3s, border-top-width 0s .3s;
+    }
+
+    .have-manu a {
+      position: relative;
+    }
+
+    .allwidth {
+      left: 0;
+      overflow: hidden;
+      background-color: #fff;
+      transition: height .3s .3s, box-shadow 0s .6s, border-top-width 0s .6s, z-index 0s .6s;
+      position: absolute;
+      top: 100px;
+      height: 0;
+      width: 100%;
+      border-top: 0px solid #e0e0e0;
+      box-sizing: border-box;
+      min-width: 1226px;
+      z-index: 8;
+    }
+
+    .aw-contain {
+      width: 1226px;
+      margin: auto;
+      padding: 0;
+      height: 230px;
+      text-align: center;
+    }
+
+    .aw-contain * {
+      text-decoration: none;
+    }
+
+    .aw-contain a {
+      display: inline-block;
+      background-color: white;
+    }
+
+    .aw-contain a>p {
+      color: #ff6700;
+    }
+
+    /* e0e0e0 */
+    .aw-contain .msg {
+      width: 160px;
+      height: 110px;
+      margin: 0 auto 16px;
+      background: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/be92bc4baa572bf467fc9e881fd4be2a.png?thumb=1&w=160&h=110&f=webp&q=90) no-repeat;
+      background-size: contain;
+    }
+
+    .aw-contain a>:not(.msg) {
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+
+    .aw-contain>li {
+      display: inline-block;
+      position: relative;
+    }
+
+    .aw-contain>li::before {
+      position: absolute;
+      content: '';
+      background-color: #e0e0e0;
+      width: 1px;
+      height: 100px;
+    }
+
+    .search-container {
+      line-height: 50px;
+      position: relative;
+      float: right;
+      width: 296px;
+      height: 50px;
+      margin-top: 25px;
+    }
+
+    .mini {
+      transition: .2s;
+    }
+
+    .search-list {
+      display: none;
+      position: absolute;
+      height: 301px;
+      width: 245px;
+      top: 50px;
+      border: 1px solid #ff6700;
+      border-top: none;
+      box-sizing: border-box;
+    }
+
+    .search-item {
+      padding: 0;
+      margin: 0;
+    }
+
+    .search-item>li {
+      padding: 0 15px;
+      height: 30px;
+      line-height: 30px;
+      box-sizing: border-box;
+    }
+
+    .search-item>li:hover {
+      background-color: #fafafa;
+    }
+
+    .search-box .mini>a {
+      padding: 0 5px;
+      position: relative;
+      transition: .2s;
+      background-color: #eee;
+      font-size: 12px;
+      color: #757575;
+      text-decoration: none;
+      right: 10px;
+    }
+
+    .search-box .mini>a:hover {
+      color: #fff;
+      background-color: #ff6700;
+    }
+
+    .search-box>[type="search"] {
+      outline: none;
+      border: 1px solid #e0e0e0;
+      border-right: none;
+      position: absolute;
+      width: 245px;
+      height: 50px;
+      font-size: 14px;
+      line-height: 48px;
+      box-sizing: border-box;
+      transition: .2s;
+    }
+
+    .search-box:hover>*:not(div) {
+      border-color: #b0b0b0;
+    }
+
+    .search-box>* {
+      float: right;
+    }
+
+    .search-box>[type="submit"] {
+      display: none;
+    }
+
+    .search-box>label {
+      position: relative;
+      text-align: center;
+      transition: .2s;
+      border: 1px solid #e0e0e0;
+      width: 52px;
+      height: 50px;
+      font-size: 24px;
+      background-color: #fff;
+      color: #616161;
+      display: block;
+      box-sizing: border-box;
+      line-height: 50px;
+    }
+
+    .search-box>label:hover {
+      color: #fff;
+      background-color: #ff6700;
+      border-color: #ff6700;
+    }
+
+    .search-box>[type="search"]:focus~label,
+    .search-box>[type="search"]:focus {
+      border-color: #ff6700;
+    }
+
+    .search-box>[type="search"]:focus~.mini {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .search-box>[type="search"]:focus~.search-list {
+      display: block;
+    }
+
+    .slider {
+      width: 1226px;
+      height: 460px;
+      margin: auto;
+      position: absolute;
+      overflow: hidden;
+
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .slider-bottom {
+      margin: 3px;
+      position: relative;
+      display: inline-block;
+      top: calc(100% - 40px);
+      left: calc(100% - 130px);
+      width: 6px;
+      height: 6px;
+      background: rgb(0, 0, 0, 40%);
+      border: 2px solid hsl(0, 0%, 100%, 30%);
+      /* hsl(0, 0%, 98%, 20%) */
+      border-radius: 10px;
+      z-index: 5;
+    }
+
+    .slider img {
+      width: 1226px;
+      height: 460px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: 1s;
+      opacity: 0;
+    }
+
+    .slider input:checked+.slider-bottom+.slider-left+.slider-right+img {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    input:checked+.slider-bottom {
+      background: hsl(0, 0%, 50%, 20%);
+      border-color: hsl(0, 0%, 0%, 40%);
+    }
+
+    .slider-bottom:hover {
+      background: hsl(0, 0%, 50%, 20%);
+      border-color: hsl(0, 0%, 0%, 40%);
+    }
+
+    .slider-left,
+    .slider-right {
+      position: absolute;
+      height: 70px;
+      width: 41px;
+      top: calc(50% - 35px);
+      z-index: 3;
+      background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+    }
+
+    .slider-left {
+      left: 236px;
+      background-position: -84px 0px;
+    }
+
+    .slider-right {
+      right: 0;
+      background-position: -124px 0px;
+    }
+
+    .slider-left:hover {
+      background-position-x: 0px;
+    }
+
+    .slider-right:hover {
+      background-position-x: -42px;
+    }
+
+    .slider input:checked+.slider-bottom+.slider-left,
+    .slider input:checked+.slider-bottom+.slider-left+.slider-right {
+      z-index: 5;
+    }
+
+    .slider-coverlist {
+      position: relative;
+      width: 1226px;
+      height: 460px;
+      margin: auto auto 14px;
+    }
+
+    .coverlist {
+      box-sizing: border-box;
+      position: absolute;
+      width: 236px;
+      height: 460px;
+      background: rgba(105, 101, 101, .6);
+      padding: 20px 0;
+      z-index: 10;
+      color: white;
+    }
+
+    .coverlist>.menu {
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .coverlist>.menu>li {
+      width: 236px;
+      height: 42px;
+      line-height: 42px;
+      padding-left: 30px;
+      box-sizing: border-box;
+    }
+
+    .coverlist>.menu>li:hover {
+      background-color: #ff6700;
+    }
+
+    .menu-list {
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      left: 236px;
+      top: 0;
+      width: 990px;
+      height: 0;
+      flex-flow: column wrap;
+      background-color: #fff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, .18);
+      transition: 0s;
+      overflow: hidden;
+    }
+
+    .menu>li:hover>.menu-list {
+      display: flex;
+      transition: 0s;
+      height: 460px;
+    }
+
+    .menu-list>li {
+      padding: 0;
+      margin: 0;
+      width: 247.5px;
+      height: 76.6px;
+      color: black;
+      display: flex;
+      align-items: center;
+      transition: .2s;
+    }
+
+
+    .menu>li>em {
+      position: relative;
+      right: 20px;
+      float: right;
+      color: white;
+      font-size: 16px;
+      line-height: 42px;
+    }
+
+    .menu-list>li>img {
+      width: 40px;
+      height: 40px;
+      margin-right: 12px;
+      margin-left: 20px;
+    }
+
+    .menu-list>li:hover {
+      color: #ff6700
+    }
+
+    .sub-sc {
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      width: 1226px;
+      margin: auto auto 26px;
+      padding: 0;
+      height: 170px;
+    }
+
+    .sub-menu {
+      background: #5f5750;
+      display: flex;
+      flex-flow: wrap;
+      width: 234px;
+      height: 170px;
+      align-content: center;
+      justify-content: center;
+      padding: 0;
+      font-size: 12px;
+    }
+
+    .sub-menu>li {
+      position: relative;
+      width: 76px;
+      height: 82px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .sub-menu>li img {
+      width: 24px;
+      height: 24px;
+      display: block;
+      margin: 18px auto 4px;
+    }
+
+    .sub-menu>li>a>* {
+      opacity: 0.7;
+      transition: opacity .2s;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .sub-menu>li>a:hover>* {
+      opacity: 1;
+    }
+
+    .sub-menu>li::before {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 70px;
+      top: 6px;
+      left: 0;
+      background: #665e57;
+    }
+
+    .sub-menu>li::after {
+      position: absolute;
+      content: '';
+      height: 1px;
+      width: 64px;
+      left: 6px;
+      top: 0;
+      background: #665e57;
+    }
+
+    .sub-sc-img>img {
+      width: 316px;
+      height: 170px;
+    }
+  </style>
+  <div class="top">
+    <div class="top-title">
+      <div class="left-top">
+        <a href=""><span>小米商城</span></a>
+        <span>|</span>
+        <a href=""><span>MIUI</span></a>
+        <span>|</span>
+        <a href=""><span>IoT</span></a>
+        <span>|</span>
+        <a href=""><span>云服务</span></a>
+        <span>|</span>
+        <a href=""><span>金融</span></a>
+        <span>|</span>
+        <a href=""><span>有品</span></a>
+        <span>|</span>
+        <a href=""><span>小爱开放平台</span></a>
+        <span>|</span>
+        <a href=""><span>企业团购</span></a>
+        <span>|</span>
+        <a href=""><span>资质证照</span></a>
+        <span>|</span>
+        <a href=""><span>协议规则</span></a>
+        <span>|</span>
+        <a href="" class="download-app"><span>下载app</span>
+          <div></div>
+        </a>
+        <span>|</span>
+        <a href=""><span>Select Location</span></a>
+      </div>
+      <div class="right-top">
+        <div class="user">
+          <a href=""><span>登录</span></a>
+          <span>|</span>
+          <a href=""><span>注册</span></a>
+          <span>|</span>
+          <a href=""><span>消息通知</span></a>
+        </div>
+        <div class="shop-car">
+          <a href=""><span class="iconfont-cart"> 购物车 </span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hlg-emp-sch">
+    <div>
+      <a class="home-logo" href=""></a>
+      <ul class="emp">
+        <li class="sp"></li>
+        <ul class="have-manu">
+          <li><a href=""><span>小米手机</span></a>
+            <div class="allwidth">
+              <ul class="aw-contain">
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>1111111</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href=""><span>Redmi 红米</span></a>
+            <div class="allwidth">
+              <ul class="aw-contain">
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>222222</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href=""><span>电视</span></a>
+            <div class="allwidth">
+              <ul class="aw-contain">
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>3333333</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href=""><span>笔记本</span></a>
+            <div class="allwidth">
+              <ul class="aw-contain">
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>444444</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href=""><span>家电</span></a>
+            <div class="allwidth">
+              <ul class="aw-contain">
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>5555555</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href=""><span>路由器</span></a>
+            <div class="allwidth">
+              <ul class="aw-contain">
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>6666666</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href=""><span>智能硬件</span></a>
+            <div class="allwidth">
+              <ul class="aw-contain">
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>777777</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="msg"></div>
+                    <div>小米CC9 Pro</div>
+                    <p>2799元起</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <li class="heresy"><a href="">服务</a></li>
+        <li class="heresy"><a href="">社区</a></li>
+      </ul>
+      <div class="search-container">
+        <form action="" class="search-box">
+          <input type="search" required autocomplete="off">
+          <label for="icon-search" class="search-btn fa fa-search"></label>
+          <input type="submit" id="icon-search">
+          <div class="mini">
+            <a href="">小米9 Pro 5G</a>
+            <a href="">Redmi Note 8</a>
+          </div>
+          <div class="search-list">
+            <ul class="search-item">
+              <li>01</li>
+              <li>02</li>
+              <li>03</li>
+              <li>04</li>
+              <li>05</li>
+              <li>06</li>
+              <li>07</li>
+              <li>08</li>
+              <li>09</li>
+              <li>10</li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="slider-coverlist">
+    <div class="coverlist">
+      <ul class="menu">
+        <li>手机 电话卡<em class="fa fa-caret-right"></em>
+          <ul class="menu-list">
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2b8b609aab05d9ad184bbe5c8e8be28.jpg?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>Redmi K30 4G</span></li>
+          </ul>
+        </li>
+        <li>电视 盒子<em class="fa fa-caret-right"></em>
+          <ul class="menu-list">
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+            <li><img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/23316088a9182a08c624958319924d8d.png?thumb=1&w=40&h=40&f=webp&q=90"
+                alt=""><span>小米电视5 55英寸</span></li>
+          </ul>
+        </li>
+        <li>笔记本 显示器 平板<em class="fa fa-caret-right"></em>
+          <ul class="menu-list">
+
+          </ul>
+        </li>
+        <li>家电 插线板<em class="fa fa-caret-right"></em>
+          <ul class="menu-list">
+
+          </ul>
+        </li>
+        <li>出行 穿戴<em class="fa fa-caret-right"></em>
+          <ul class="menu-list">
+
+          </ul>
+        </li>
+        <li>智能 路由器<em class="fa fa-caret-right"></em>
+          <ul class="menu-list">
+
+          </ul>
+        </li>
+        <li>电源 配件<em class="fa fa-caret-right"></em>
+          <ul class="menu-list">
+
+          </ul>
+        </li>
+        <li>健康 儿童<em class="fa fa-caret-right"></em>
+          <ul class="menu-list">
+
+          </ul>
+        </li>
+        <li>耳机 音箱<em class="fa fa-caret-right"></em>
+          <ul class="menu-list">
+
+          </ul>
+        </li>
+        <li>生活 箱包<em class="fa fa-caret-right"></em>
+          <ul class="menu-list">
+
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="slider">
+      <input type="radio" name="sc-slider" checked id="a">
+      <label class="slider-bottom" for="a"></label>
+      <label class="slider-left" for="e"></label>
+      <label class="slider-right" for="b"></label>
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5a0b5c060d5f887cdb555aa56d6ca61e.jpg?w=2452&h=920" alt="">
+      <input type="radio" name="sc-slider" id="b">
+      <label class="slider-bottom" for="b"></label>
+      <label class="slider-left" for="a"></label>
+      <label class="slider-right" for="c"></label>
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ad84d80e7fc5990162a387a6b103af01.jpeg?w=2452&h=920" alt="">
+      <input type="radio" name="sc-slider" id="c">
+      <label class="slider-bottom" for="c"></label>
+      <label class="slider-left" for="b"></label>
+      <label class="slider-right" for="d"></label>
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e4405ac413e1c3bcb78e1218df82a9e2.jpg?w=2452&h=920" alt="">
+      <input type="radio" name="sc-slider" id="d">
+      <label class="slider-bottom" for="d"></label>
+      <label class="slider-left" for="c"></label>
+      <label class="slider-right" for="e"></label>
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e52c3e98602b90f198ec316dce253cba.jpg?w=2452&h=920" alt="">
+      <input type="radio" name="sc-slider" id="e">
+      <label class="slider-bottom" for="e"></label>
+      <label class="slider-left" for="d"></label>
+      <label class="slider-right" for="a"></label>
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/05bc8af40fc9f9941808d253034c279d.jpg?w=2452&h=920" alt="">
+    </div>
+  </div>
+  <ul class="sub-sc">
+    <li>
+      <ul class="sub-menu">
+        <li><a href=""><img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt="">
+            <span>小米秒杀</span></a></li>
+        <li><a href=""><img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/806f2dfb2d27978e33fe3815d3851fa3.png?w=48&h=48" alt="">
+            <span>企业团购</span></a></li>
+        <li><a href=""><img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/eded6fa3b897a058163e2485532c4f10.png?w=48&h=48" alt="">
+            <span>F码通道</span></a></li>
+        <li><a href=""><img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/43a3195efa6a3cc7662efed8e7abe8bf.png?w=48&h=48" alt="">
+            <span>米粉卡</span></a></li>
+        <li><a href=""><img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/f4846bca6010a0deb9f85464409862af.png?w=48&h=48" alt="">
+            <span>以旧换新</span></a></li>
+        <li><a href=""><img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9a76d7636b08e0988efb4fc384ae497b.png?w=48&h=48" alt="">
+            <span>话费充值</span></a></li>
+      </ul>
+    </li>
+    <li class="sub-sc-img"><img
+        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7c5524bbd8d8e2d8b4fec3774915d2fb.jpg?w=632&h=340" alt="">
+    </li>
+    <li class="sub-sc-img"><img
+        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/daae21ecb17e628f5255412f103c626f.jpg?w=632&h=340" alt="">
+    </li>
+    <li class="sub-sc-img"><img
+        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/816a66edef10673b4768128b41804cae.jpg?w=632&h=340" alt="">
+    </li>
+  </ul>
+  <div class="soldier">
+    <div class="flash-buy">
+      <h2 class="fb-h">小米闪购</h2>
+      <div class="fb-content">
+        <div class="fb-time-mark">
+          <span class="fb-tm-round">20:00 场</span>
+          <img src="data:img/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAA1CAYAAAAklDnhAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1
+MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5j
+ZUlEPSJ4bXAuaWlkOjY4Q0ZFMkY5MTJFNzExRThCMkM4OEM1RTNBNjczQUVBIiB4bXBNTTpEb2N1
+bWVudElEPSJ4bXAuZGlkOjY4Q0ZFMkZBMTJFNzExRThCMkM4OEM1RTNBNjczQUVBIj4gPHhtcE1N
+OkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NjhDRkUyRjcxMkU3MTFFOEIy
+Qzg4QzVFM0E2NzNBRUEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NjhDRkUyRjgxMkU3MTFF
+OEIyQzg4QzVFM0E2NzNBRUEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94Onht
+cG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5oEyacAAACoklEQVR42sSYv0tbURTHX0LqD6T4g4pE
+cHDoUOloBxVd/QFFEcQqWtrSKlKFmmAslopohzgIbv4FwUEE0clFujiIi+BSIbRQ0ooKRReRULHf
+S48Qgu++c3/FAx+iyU3eJzf3nnPuC/1qavQ04zVY8szjCHRGNN9cBD6DSkOJKzAGzsOaH/AW1FuY
+jRg4EH/oiJSCTxYk1sDK7T86Iu9BraHED/Au9wlVkYdg2lAiC/rBhYnIB/DIUOQj2M9/UkWkCsQN
+JbbA8l0vqIhMgXIDiZ/gFbgxEakBEwYSf8Eg+OM3gCsyA8oMRETy25UN4IjUgVEDiW2wGDSIIzIL
+ijUljsFLv3WhIvKYFphOXNO6OOUMDhKZA7qFcQF85Q6WXeQpeKEpcULlvY8xthp8iwR8I93qLLb7
+KnOsSPWNfhd6Bro99yHqTi9IhyWzEXIsIXbSG7Djt1jbQHsBZkMkyZRs13wpgIRoiJKy7dsBWh1L
+bN5Vt3JFQrQ2XMYeGKBk5yvSI7aRQ4k0eA4uZZlVPM47lDgTZxd6lKb4AcqkLuKSZiIdVGsiVFNc
+xDV9yT1Orekjoe+MDw4pHqwmaJewit66Ql0QaX+DOTaZe4DitAFZxQaaEynKnJ6KCDeaQAtj3A7V
+kBtXIpwT3iFV06zqquaKPKEtKIsM6Mo/StoWiQeMvSCJjO4+54hEwTCjuTk0STgckUm6QxTY3LgU
+Kc+/jyFrblyKCIkKbnPjSkT8HDGV5saVyBAtVHZz40Ik7HNTRtrcuBARF2tQbW5ciCR0mhvbIs2E
+cnNjWySh29zYFGnIK25KzY1Nkdziptzc2BKJUu7Qbm5sicQom2o3NzZEKqiu/DZpbmyIjIAHNBMZ
+7x4iTALjhcgVQSIl3v87w5vePcY/AQYAFYR6skFSqBUAAAAASUVORK5CYII=" alt="">
+          <span class="fb-tm-before-cd">距离结束还有</span>
+          <div class="fb-countdown">
+            <span class="fb-cd-h">00</span>
+            <i>:</i>
+            <span class="fb-cd-m">27</span>
+            <i>:</i>
+            <span class="fb-cd-s">17</span>
+          </div>
+        </div>
+        <ul class="fb-commodity">
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+          <li><img
+              src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1571660595.33144009.jpg?thumb=1&w=200&h=200"
+              alt="">
+            <p>米家魔方转换器 有线版</p>
+            <p>方寸之间,能量无限</p>
+            <div><span>59元</span><del>69元</del></div>
+          </li>
+        </ul>
+      </div>
+      <div class="fb-sld">
+        <input type="radio" checked name="fb-pg" id="fb-one">
+        <input type="radio" name="fb-pg" id="fb-two">
+        <input type="radio" name="fb-pg" id="fb-three">
+        <input type="radio" name="fb-pg" id="fb-four">
+        <input type="radio" name="fb-pg" id="fb-five">
+        <input type="radio" name="fb-pg" id="fb-six">
+        <input type="radio" name="fb-pg" id="fb-seven">
+        <section class="fb-bt">
+          <label for="fb-one"></label>
+          <label for="fb-two"></label>
+          <label for="fb-two"></label>
+          <label for="fb-three"></label>
+          <label for="fb-three"></label>
+          <label for="fb-four"></label>
+          <label for="fb-four"></label>
+          <label for="fb-five"></label>
+          <label for="fb-five"></label>
+          <label for="fb-six"></label>
+          <label for="fb-six"></label>
+          <label for="fb-seven"></label>
+        </section>
+      </div>
+      <div class="fb-sub"><img
+          src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b8bdd93c2aad57ede093b09d40000a48.jpg?thumb=1&w=1226&h=120&f=webp&q=90"
+          alt=""></div>
+    </div>
+  </div>
+  <style>
+    .soldier {
+      background-color: #f5f5f5;
+      padding-top: 4px;
+      padding-bottom: 12px;
+    }
+
+    .flash-buy {
+      width: 1226px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .fb-h {
+      margin: 0;
+      font-size: 22px;
+      color: #333;
+      line-height: 58px;
+      font-weight: 200;
+    }
+
+    .fb-time-mark,
+    .fb-commodity>li {
+      background-color: #f1eded;
+      width: 234px;
+      height: 340px;
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-top-color: #e53935;
+      padding-top: 39px;
+      text-align: center;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      margin-right: 14px;
+    }
+
+    .fb-time-mark>img {
+      margin: 25px auto;
+    }
+
+    .fb-time-mark>span {
+      display: block;
+    }
+
+    .fb-tm-round {
+      color: #e53935;
+      font-size: 21px;
+      padding-top: 15px;
+    }
+
+    .fb-tm-before-cd {
+      color: rgba(0, 0, 0, .54);
+      font-size: 15px;
+    }
+
+    .fb-countdown {
+      width: 168px;
+      margin: 28px auto 0;
+      display: flex;
+    }
+
+    .fb-countdown>span {
+      width: 46px;
+      height: 46px;
+      background: #605751;
+      color: #fff;
+      font-size: 24px;
+      line-height: 46px;
+    }
+
+    .fb-countdown>i {
+      width: 15px;
+      height: 46px;
+      line-height: 46px;
+      color: #605751;
+      font-size: 28px;
+      font-style: normal;
+    }
+
+    .fb-content {
+      display: flex;
+      flex-flow: space-between;
+    }
+
+    .fb-commodity {
+      display: flex;
+      flex-flow: space-between;
+      overflow: hidden;
+      height: 340px;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    .fb-commodity>li {
+      background-color: white;
+    }
+
+    .fb-commodity>li>p:first-of-type {
+      margin: 0 20px 3px;
+      font-size: 14px;
+      font-weight: 400;
+      text-overflow: ellipsis;
+      color: #212121;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .fb-commodity>li>p:last-of-type {
+      height: 18px;
+      margin: 0 20px 12px;
+      font-size: 12px;
+      text-overflow: ellipsis;
+      color: #b0b0b0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .fb-commodity>li>div {
+      margin: 0;
+      color: #ff6709;
+    }
+
+    .fb-commodity>li>div>del {
+      color: #b0b0b0;
+    }
+
+    .fb-sub {
+      margin: 22px 0;
+    }
+
+    .fb-bt {
+      position: absolute;
+      right: 0;
+      top: 24px;
+    }
+
+    .fb-bt::before {
+      width: 36px;
+      height: 24px;
+      box-sizing: border-box;
+      content: "\f0da";
+    }
+
+    .fb-bt>label {
+      width: 24px;
+      height: 16px;
+      padding: 3px 5px;
+      margin-left: -1px;
+      border: 1px solid #e0e0e0;
+      font-size: 16px;
+      line-height: 16px;
+      -webkit-transition: color .5s;
+      transition: color .5s;
+      color: #b0b0b0;
+      text-align: center;
+    }
+  </style>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>clock</title>
+</head>
+
+<body>
+  <div class="bgc">
+    <div class="bgi">
+      <div class="sec needle"></div>
+      <div class="min needle"></div>
+      <div class="hou needle"></div>
+    </div>
+  </div>
+  <style>
+    .bgc {
+      background-color: #cdcdcd;
+      border-radius: 9px;
+      width: 360px;
+      height: 370px;
+      padding: 36px;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .bgi {
+      background: #fff url(https://cssanimation.rocks/images/posts/clocks/ios_clock.svg) center no-repeat;
+      background-size: 88%;
+      border-radius: 200px;
+      width: 360px;
+      height: 360px;
+      position: relative;
+    }
+
+    .bgi::before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: calc(50% - 9px);
+      left: calc(50% - 9px);
+      border-radius: 9px;
+      background-color: #000;
+    }
+
+    .needle {
+      position: absolute;
+    }
+
+    .needle::before {
+      position: absolute;
+      content: '';
+      background-color: #000;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* min145*8 sec164*5+34 hou73*10*/
+    .sec::before {
+      animation: sec-jump infinite 1s cubic-bezier(.4, 2.08, .55, .44);
+      transform-origin: 50% 130px;
+    }
+
+    .min::before {
+      animation: min-jump infinite 60s cubic-bezier(.4, 2.08, .55, .44);
+      transform-origin: 50% 100%;
+    }
+
+    .hou::before {
+      transform-origin: 50% 100%;
+      animation: hou-jump infinite 3600s cubic-bezier(.4, 2.08, .55, .44);
+    }
+
+    .sec {
+      animation: sec-work infinite 86400s steps(86400);
+      left: calc(50% - 2.5px);
+      top: 50px;
+      width: 5px;
+      height: 164px;
+      transform-origin: 2.5px 130px;
+    }
+
+    .min {
+      animation: min-work infinite 3600s steps(60);
+      width: 8px;
+      height: 145px;
+      bottom: 50%;
+      left: calc(50% - 4px);
+      transform-origin: 50% 100%;
+    }
+
+    .hou {
+      width: 10px;
+      height: 73px;
+      bottom: 50%;
+      left: calc(50% - 5px);
+      transform-origin: 50% 100%;
+      animation: hou-work infinite 86400s steps(120);
+    }
+
+    @keyframes sec-work {
+      to {
+        transform: rotate(518400deg);
+      }
+    }
+
+    @keyframes min-work {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes hou-work {
+      to {
+        transform: rotate(720deg);
+      }
+    }
+
+    @keyframes sec-jump {
+      from {
+        transform: rotate(0deg);
+      }
+
+      20%,
+      to {
+        transform: rotate(5deg);
+      }
+    }
+
+    @keyframes min-jump {
+      from {
+        transform: rotate(0deg);
+      }
+
+      0.3333333333333%,
+      to {
+        transform: rotate(5deg);
+      }
+    }
+
+    @keyframes hou-jump {
+      from {
+        transform: rotate(0deg);
+      }
+
+      0.005555555555555556%,
+      to {
+        transform: rotate(5deg);
+      }
+    }
+  </style>
+</body>
+
+</html>

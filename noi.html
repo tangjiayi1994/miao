@@ -40,7 +40,7 @@
   <script xtype="x" id="ch0103/06">
     var a = +prompt();
     var b = +prompt();
-    console.log((b / a).toFixed(3) + "%");
+    console.log((b / a * 100).toFixed(3) + "%");
   </script>
   <script xtype="x" id="ch0103/07">
     var x = +prompt();
@@ -56,9 +56,10 @@
   </script>
   <script xtype="x" id="ch0103/09">
     var r = +prompt();
+    var pi = 3.14159;
     console.log((2 * r).toFixed(4));
-    console.log((2 * r * Math.PI).toFixed(4));
-    console.log((r * r * Math.PI).toFixed(4));
+    console.log((2 * r * pi).toFixed(4));
+    console.log((r * r * pi).toFixed(4));
   </script>
   <script xtype="x" id="ch0103/10">
     var r1 = +prompt();
@@ -72,7 +73,8 @@
   </script>
   <script xtype="x" id="ch0103/12">
     var r = +prompt();
-    console.log((4 / 3 * Math.PI * Math.pow(r, 3)).toFixed(2));
+    var pi = 3.14;
+    console.log((4 / 3 * pi * Math.pow(r, 3)).toFixed(2));
   </script>
   <script xtype="x" id="ch0103/13">
     var n = +prompt();
@@ -84,7 +86,8 @@
   <script xtype="x" id="ch0103/14">
     var h = +prompt();
     var r = +prompt();
-    var v = Math.PI * r * r * h
+    var pi = 3.14159;
+    var v = pi * r * r * h
     console.log(Math.ceil(20 / v));
   </script>
   <script xtype="x" id="ch0103/15">
@@ -119,7 +122,7 @@
   <script xtype="x" id="ch0103/18">
     var a1 = +prompt();
     var a2 = +prompt();
-    var n = +prompt();
+    var n = +prompt() - 1;
     var d = a2 - a1;
     console.log(a1 + d * n);
   </script>

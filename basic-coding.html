@@ -146,8 +146,8 @@
     }
   </script>
   <script xtype="x" id="ch0104/02">
-    var n = +prompt().toFixed(2)
-    console.log(Math.abs(n))
+    var n = +prompt()
+    console.log(Math.abs(n.toFixed(2)))
   </script>
   <script xtype="x" id="ch0104/03">
     var n = +prompt()
@@ -248,7 +248,7 @@
     var x = +prompt()
     var bike = 50 + x / 3
     var walk = x / 1.2
-    if (bike > walk) {
+    if (bike < walk) {
       console.log("Bike")
     } else if (bike == walk) {
       console.log("All")
@@ -296,7 +296,7 @@
     var x = +prompt()
     var y = +prompt()
     var z = +prompt()
-    if (x + y < z && x + z < y && z + y < x) {
+    if (x + y > z && x + z > y && z + y > x) {
       console.log("yes")
     } else {
       console.log("no")
@@ -305,7 +305,9 @@
   <script xtype="x" id="ch0104/17">
     var x = +prompt()
     if (x % 4 == 0 && (x % 100 == 0 && x % 400 != 0) && x % 3200 != 0) {
-      console.log("yes")
+      console.log("Y")
+    } else {
+      console.log("N")
     }
   </script>
   <script xtype="x" id="ch0104/18">
@@ -335,7 +337,7 @@
       console.log("Invalid operator!")
     }
   </script>
-  <script xtype="x" id="ch0104/19">
+  <script xtype="x" id="ch0104/20">
     var a = +prompt()
     var b = +prompt()
     var c = +prompt()

@@ -359,6 +359,456 @@
       console.log("x1=" + sb + "+" + xb + "i;x2=" + sb + "-" + xb + "i")
     }
   </script>
+  <script xtype="x" id="ch0104/21">
+    var n = +prompt()
+    var x = +prompt()
+    var y = +prompt()
+    console.log(n - Math.ceil(y / x))
+  </script>
+  <script xtype="x" id="ch0105/01">
+    var n = +prompt()
+    var s = 0
+    for (let i = 0; i < n; i++) {
+      s += +prompt()
+    }
+    console.log((s / n).toFixed(2))
+  </script>
+  <script xtype="x" id="ch0105/02">
+    var s = 0
+    for (let i = 0; i < 12; i++) {
+      s += (+prompt()).toFixed(2)
+    }
+    console.log("$" + (s / 12).toFixed(2))
+  </script>
+  <script xtype="x" id="ch0105/03">
+    var n = +prompt()
+    var s = 0
+    for (let i = 0; i < n; i++) {
+      s += +prompt()
+    }
+    console.log((s / n).toFixed(4))
+  </script>
+  <script xtype="x" id="ch0105/04">
+    var n = +prompt()
+    var s = 0
+    for (let i = 0; i < n; i++) {
+      s += +prompt()
+    }
+    console.log(s)
+    console.log((s / n).toFixed(5))
+  </script>
+  <script xtype="x" id="ch0105/05">
+    var n = +prompt()
+    var max = 0
+    for (let i = 0, c; i < n; i++) {
+      c = +prompt()
+      if (max < c) {
+        max = c
+      }
+    }
+    console.log(max)
+  </script>
+  <script xtype="x" id="ch0105/06">
+    var n = +prompt()
+    var max = 0
+    var min = 1001
+    for (let i = 0, c; i < n; i++) {
+      c = +prompt()
+      if (max < c) {
+        max = c
+      }
+      if (min > c) {
+        min = c
+      }
+    }
+    console.log(max - min)
+  </script>
+  <script xtype="x" id="ch0105/07">
+    var n = +prompt()
+    var jin = 0, yin = 0, tong = 0
+    for (let i = 0; i < n; i++) {
+      jin = +prompt()
+      yin = +prompt()
+      tong = +prompt()
+    }
+    console.log(jin + " " + yin + " " + tong + " " + (jin + yin + tong))
+  </script>
+  <script xtype="x" id="ch0105/08">
+    var n = +prompt()
+    var s = (n - 2) * 180
+    for (let i = 1; i < n; i++) {
+      s -= +prompt()
+    }
+    console.log(s)
+  </script>
+  <script xtype="x" id="ch0105/09">
+    var m = +prompt()
+    var n = +prompt()
+    var s = 0
+    if (m % 2 == 0) {
+      m += 1
+    }
+    if (n % 2 == 0) {
+      n -= 0
+    }
+    for (let i = m; i <= n; i += 2) {
+      s += i
+    }
+    console.log(s)
+  </script>
+  <script xtype="x" id="ch0105/10">
+    var m = +prompt()
+    var n = +prompt()
+    var s = 0
+    if (n < 17) {
+      console.log(0)
+    } else if (n == 17) {
+      console.log(17)
+    } else {
+      if (m <= 17) {
+        m = 17
+      } else {
+        m = Math.ceil(m / 17) * 17
+      }
+      for (let i = m; i < n; i += 17) {
+        s += i
+      }
+    }
+    console.log(s)
+  </script>
+  <script xtype="x" id="ch0105/11">
+    var x = +prompt()
+    var a = 0, b = 0, c = 0
+    for (let i = 0, y; i < x; i++) {
+      y = +prompt()
+      if (y == 1) {
+        a++
+      } else if (y == 5) {
+        b++
+      } else if (y == 10) {
+        c++
+      } else continue
+    }
+    console.log(a)
+    console.log(b)
+    console.log(c)
+  </script>
+  <script xtype="x" id="ch0105/12">
+    var x = +prompt()
+    var y = +prompt()
+    var s = 0
+    for (let i = 0, a; i < x; i++) {
+      a = +prompt()
+      if (y == a) s++
+    }
+    console.log(s)
+  </script>
+  <script xtype="x" id="ch0105/13">
+    var a = +prompt()
+    var n = +prompt()
+    for (let i = 1; i < n; i++) {
+      a *= a
+    }
+    console.log(a)
+  </script>
+  <script xtype="x" id="ch0105/14">
+    var x = +prompt()
+    var n = +prompt()
+    for (let i = 1; i < n; i++) {
+      x *= 1.001
+    }
+    console.log(x.toFixed(4))
+  </script>
+  <script xtype="x" id="ch0105/15">
+    var r = +prompt() / 100 + 1
+    var m = +prompt()
+    var y = +prompt()
+    for (let i = 1; i < y; i++) {
+      m *= r
+    }
+    console.log(Math.trunc(m))
+  </script>
+  <script xtype="x" id="ch0105/16">
+    var n = +prompt()
+    var k = +prompt() / 100 + 1
+    var m = 200
+    var i = 1
+    var s = n
+    do {
+      m *= k
+      s += n
+    } while (++i <= 20 && s < m)
+    if (s >= m) {
+      console.log(i)
+    } else {
+      console.log("Impossible")
+    }
+  </script>
+  <script xtype="x" id="ch0105/17">
+    var k = +prompt()
+    var a = 1
+    var b = 1
+    // 1 1 2 3 5 8 13 21
+    if (k == 1 || k == 2) {
+      console.log(1)
+    } else {
+      for (let i = 3; i <= k; i++) {
+        a = a + b
+        b = a - b
+      }
+    }
+    console.log(a)
+  </script>
+  <script xtype="x" id="ch0105/18">
+    var n = +prompt() - 1
+    var a = +prompt()
+    var b = +prompt()
+    var basic = b / a
+    for (let i = 0, x, y, xy; i < n; i++) {
+      x = +prompt()
+      y = +prompt()
+      xy = y / x
+      if (xy - basic > 0.05) console.log("better")
+      else if (basic - xy > 0.05) console.log("worse")
+      else console.log("same")
+    }
+  </script>
+  <script xtype="x" id="ch0105/19">
+    var n = +prompt()
+    var s = 0
+    for (let i = 0, x, y, p; i < i; i++) {
+      x = +prompt()
+      y = +prompt()
+      p = +prompt()
+      s += Math.sqrt(x * x + y * y) / 50 * 2 + 1.5 * p
+    }
+    console.log(Math.ceil(s))
+  </script>
+  <script xtype="x" id="ch0105/20">
+    var n = +prompt()
+    var s = n
+    for (let i = 0; i < 10; i++) {
+      s += n
+      n = 0.5 * n
+    }
+    console.log(s - 2 * n)
+    console.log(n)
+  </script>
+  <script xtype="x" id="ch0105/21">
+    var n = +prompt()
+    while (n != 1) {
+      if (n % 2 == 0) {
+        n /= 2
+        console.log("" + 2 * n + "/2=" + n)
+      } else {
+        console.log("" + n + "*3+1=" + (n * 3 + 1))
+        n = n * 3 + 1
+      }
+    }
+    console.log("End")
+  </script>
+  <script xtype="x" id="ch0105/22">
+    var s = 0
+    var spec = 0, last = 0
+    for (let i = 1, yusuan, x; i <= 12; i++) {
+      yusuan = +prompt()
+      last = last + 300 - yusuan
+      if (last < 0 && spec == 0) {
+        spec = -1 * i
+      }
+      x = Math.floor(last / 100)
+      if (x >= 1) {
+        s += x * 100
+        last -= x * 100
+      }
+    }
+    if (spec == 0) {
+      console.log(s * 1.2 + last)
+    } else {
+      console.log(spec)
+    }
+  </script>
+  <script xtype="x" id="ch0105/23">
+    var m = +prompt()
+    var n = +prompt()
+    var mark = 0
+    for (let i = 1, num; i <= n; i++) {
+      num = +prompt()
+      if (m - num >= 0) m -= num
+      else {
+        mark++
+        continue
+      }
+    }
+    console.log(mark)
+  </script>
+  <script xtype="x" id="ch0105/24">
+    var n = +prompt()
+    var mark = 0
+    var max = 0
+    for (let i = 0, shousuo, shuzhang; i < n; i++) {
+      shousuo = +prompt()
+      shuzhang = +prompt()
+      if (shousuo >= 90 && shousuo <= 140 && shuzhang >= 60 && shuzhang <= 90) {
+        mark++
+      } else {
+        if (max < mark) max = mark
+        mark = 0
+      }
+    }
+    console.log(mark)
+  </script>
+  <script xtype="x" id="ch0105/25">
+    for (let i = 100, sevenhigh, sevenmid, sevenlow, mark; i <= 342; i++) {
+      sevenhigh = Math.floor(i / 49)
+      sevenmid = Math.floor((i - sevenhigh * 49) / 7)
+      sevenlow = i % 7
+      if ((sevenlow * 81 + sevenmid * 9 + sevenhigh) == i) console.log(i)
+    }
+  </script>
+  <script xtype="x" id="ch0105/26">
+    var n = +prompt()
+    var mark = 0
+    for (let i = 0, m, x; i < n; i++) {
+      m = +prompt()
+      x = m % 10 - Math.trunc(m / 10) % 10 - Math.trunc(m / 100) % 10 - Math.trunc(m / 1000) % 10
+      if (x > 0) mark++
+    }
+    console.log(mark)
+  </script>
+  <script xtype="x" id="ch0105/27">
+    var k = +prompt()
+    var n = 0, s = 0
+    while (1) {
+      n++
+      s += (1 / n)
+      if (s > k) break
+    }
+    console.log(n)
+  </script>
+  <script xtype="x" id="ch0105/28">
+    var k = +prompt()
+    while (k > 0) {
+      console.log(k % 10)
+      k = Math.trunc(k / 10)
+    }
+  </script>
+  <script xtype="x" id="ch0105/29">
+    var k = +prompt()
+    var mark = 0, str = ""
+    if (k < 0) mark = -1
+    else mark = 1
+    k = Math.abs(k)
+    while (k > 0) {
+      str += k % 10
+      k = Math.trunc(k / 10)
+    }
+    if (-1 * mark) str = "-" + str
+    console.log(str)
+  </script>
+  <script xtype="x" id="ch0105/30">
+    var m = +prompt()
+    var k = +prompt()
+    var mark = 0
+    if (m % 19 == 0) {
+      while (m > 0) {
+        if (m % 10 == 3) mark++
+        m = Math.trunc(m / 10)
+      }
+      if (mark == k) console.log("YES")
+      else console.log("NO")
+    }
+    else console.log("NO")
+  </script>
+  <script xtype="x" id="ch0105/31">
+    var n = +prompt()
+    var m = +prompt()
+    if (m * m >= n) {
+      for (let i = 1; i < Math.sqrt(m); i++) {
+        console.log(i * i)
+      }
+    } else {
+      for (let i = 1; i <= m; i++) {
+        console.log(i * i)
+      }
+      for (let i = m * m + 1, mark = 0; i <= n; i++) {
+        for (let j = 1; j <= m; j++) {
+          if (i % j == 0) mark++
+        }
+        if (mark % 2 == 1) console.log(i)
+      }
+    }
+  </script>
+  <script xtype="x" id="ch0105/32">
+    var n = +prompt()
+    var s = 0
+    var p = 1, q = 2
+    for (let i = 0; i < n; i++) {
+      s += q / p
+      q = q + p
+      p = q - p
+    }
+    console.log(s.toFixed(4))
+  </script>
+  <script xtype="x" id="ch0105/33">
+    var n = +prompt()
+    var s = 0
+    for (let i = 0; i < n; i++) {
+      s += Math.pow(-1, i) / (i + 1)
+    }
+    console.log(s.toFixed(4))
+  </script>
+  <script xtype="x" id="ch0105/34">
+    var n = +prompt()
+    var s = 0
+    for (let i = 1, x = 1; i <= n; i++) {
+      for (let j = 1; j <= i; j++) {
+        x *= j
+      }
+      s += x
+      x = 1
+    }
+    console.log(s)
+  </script>
+  <script xtype="x" id="ch0105/35">
+    var n = +prompt()
+    var s = 1
+    for (let i = 1, x = 1; i <= n; i++) {
+      for (let j = 1; j <= i; j++) {
+        x *= j
+      }
+      s += 1 / x
+      x = 1
+    }
+    console.log(s.toFixed(10))
+  </script>
+  <script xtype="x" id="ch0105/36">
+    var x = +prompt()
+    var n = +prompt()
+    var s = 0
+    for (let i = 0; i <= n; i++) {
+      s += Math.pow(x, i)
+    }
+    console.log(s.toFixed(2))
+  </script>
+  <script xtype="x" id="ch0105/37">
+    var mMax = +prompt()//体力上限，初始为0，每天消耗一点体力
+    var m = 0
+    var n = +prompt()//战斗期开始时的战斗力，每n天战斗力+1
+    var x = +prompt()//能量元素恢复体力为1：n
+    while (x > 0) {
+      if (x * n >= mMax) {
+        m = mMax
+        x -= (mMax / n)
+      } else break
+      n += Math.trunc(m / n)
+      m = 0
+    }
+    console.log(n)
+  </script>
+  <script xtype="x" id="ch0105/38">
+
+  </script>
 </body>
 
 </html>

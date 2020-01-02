@@ -666,8 +666,8 @@
       sevenlow = i % 7
       if ((sevenlow * 81 + sevenmid * 9 + sevenhigh) == i) {
         console.log(i)
-        console.log(+("" + sevenhigh + sevenmid + sevenlow))
-        console.log(+("" + sevenlow + sevenmid + sevenhigh))
+        console.log("" + sevenhigh + sevenmid + sevenlow)
+        console.log("" + sevenlow + sevenmid + sevenhigh)
       }
     }
   </script>
@@ -820,8 +820,129 @@
     console.log(n)
   </script>
   <script xtype="x" id="ch0105/38">
-
+    var n = +prompt()
+    for (let i = 0, x; i < n; i++) {
+      x = +prompt()
+      for (let j = x, y; j >= 0; j--) {
+        y = +prompt()
+        if (j != 0 || x == 0) console.log(y * j)
+      }
+    }
   </script>
+  <script xtype="x" id="ch0105/39">
+    var n = +prompt()
+    var s = 0
+    for (let i = 1; i <= n; i++) {
+      if (i % 10 == 7 || Math.trunc(i / 10) == 7 || i % 7 == 0) continue
+      else s += i * i
+    }
+    console.log(s)
+  </script>
+  <script xtype="x" id="ch0105/39">
+    var n = +prompt()
+    var s = 0
+    for (let i = 1; i <= n; i++) {
+      if (i % 10 == 7 || Math.trunc(i / 10) == 7 || i % 7 == 0) continue
+      else s += i * i
+    }
+    console.log(s)
+  </script>
+  <script xtype="x" id="ch0105/40">
+    var n = +prompt()
+    var mark = 0
+    for (let i = 1, j; i <= n; i++) {
+      j = i
+      do {
+        if (j % 10 == 1) mark++
+        j = Math.trunc(j / 10)
+      } while (j > 0);
+    }
+    console.log(mark)
+  </script>
+  <script xtype="x" id="ch0105/41">
+    var n = +prompt()
+    var m = +prompt()
+    var mark = 0
+    for (let i = n, j; i <= m; i++) {
+      j = i
+      do {
+        if (j % 10 == 2) mark++
+        j = Math.trunc(j / 10)
+      } while (j > 0);
+    }
+    console.log(mark)
+  </script>
+  <script xtype="x" id="ch0105/42">
+    var a = +prompt()
+    var b = +prompt()
+    var c = prompt()
+    var d = +prompt()
+    for (let i = 0, str; i < a; i++) {
+      str = ""
+      if (i != 0 && i != a - 1) {
+        for (let j = 0; j < b; j++) {
+          if (d) {
+            str += c
+          } else {
+            if (j == 0 || j == b - 1) str += c
+            else str += " "
+          }
+        }
+      } else {
+        for (let j = 0; j < b; j++) {
+          str += c
+        }
+      }
+      console.log(str)
+    }
+  </script>
+  <script xtype="x" id="ch0105/43">
+  </script>
+  <script xtype="x" id="ch0105/44">
+  </script>
+  <script xtype="x" id="ch0105/45">
+    var n = +prompt()
+    var m = n
+    var i = 1
+    var s = 0
+    while (1) {
+      if (m - i <= 0) break
+      m -= i
+      i++
+    }
+    for (let j = 1; j < i; j++) {
+      s += j * j
+    }
+    s += m * i
+    console.log(s)
+  </script>
+  <script xtype="x" id="7">
+    var n = +prompt()
+    var mark = false, m = n
+    while (m > 0) {
+      if (m % 10 == 7) {
+        mark = true
+        break
+      }
+      m = Math.trunc(m / 10)
+    }
+    if (mark == true || n % 7 == 0) console.log("YES")
+    else console.log("NO")
+  </script>
+  <!--  7: 输入一个数，输出其是否是7的倍数或各个位上是否有7（25：NO，27：YES，21：YES)
+        sort: 输入3个数，按从小到大顺序输出
+        narcissistic: 输入一个数判断其是否为水仙花数，输出"YES"/"NO"
+        narcissistics: 输出1000以内的水仙花数
+        palindrom: 输入一个数，判断其是否为一个一个回文数"YES"/"NO"
+        weekday: 输入年份与月份，输出这此年此月的第一天为星期几（0对应周日，1对应周一）
+        complete-number: 输入一个数判断其是否为完数，输出"YES"/"NO"
+        complete-numbers: 输出1000以内的完数
+        prime: 输入一个数判断其是否为素数数，输出"YES"/"NO"
+        primes: 输出100以内的素数
+        itob: 输入一个数，输出其字符串形式
+        lcf&lcm: 输入两个数，分别输出它们的最大公约数和最小公倍数
+        sqrt: 输入一个数，输出其平方根，精确到小数点后3位
+ -->
 </body>
 
 </html>

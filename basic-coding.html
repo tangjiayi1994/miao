@@ -666,8 +666,8 @@
       sevenlow = i % 7
       if ((sevenlow * 81 + sevenmid * 9 + sevenhigh) == i) {
         console.log(i)
-        console.log("" + sevenhigh + sevenmid + sevenlow)
-        console.log("" + sevenlow + sevenmid + sevenhigh)
+        console.log(+("" + sevenhigh + sevenmid + sevenlow))
+        console.log(+("" + sevenlow + sevenmid + sevenhigh))
       }
     }
   </script>

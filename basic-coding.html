@@ -376,7 +376,7 @@
   <script xtype="x" id="ch0105/02">
     var s = 0
     for (let i = 0; i < 12; i++) {
-      s += (+prompt()).toFixed(2)
+      s += +prompt()
     }
     console.log("$" + (s / 12).toFixed(2))
   </script>
@@ -427,9 +427,9 @@
     var n = +prompt()
     var jin = 0, yin = 0, tong = 0
     for (let i = 0; i < n; i++) {
-      jin = +prompt()
-      yin = +prompt()
-      tong = +prompt()
+      jin += +prompt()
+      yin += +prompt()
+      tong += +prompt()
     }
     console.log(jin + " " + yin + " " + tong + " " + (jin + yin + tong))
   </script>
@@ -470,7 +470,7 @@
       } else {
         m = Math.ceil(m / 17) * 17
       }
-      for (let i = m; i < n; i += 17) {
+      for (let i = m; i <= n; i += 17) {
         s += i
       }
     }
@@ -506,15 +506,16 @@
   <script xtype="x" id="ch0105/13">
     var a = +prompt()
     var n = +prompt()
+    var x = a
     for (let i = 1; i < n; i++) {
-      a *= a
+      x *= a
     }
-    console.log(a)
+    console.log(x)
   </script>
   <script xtype="x" id="ch0105/14">
     var x = +prompt()
     var n = +prompt()
-    for (let i = 1; i < n; i++) {
+    for (let i = 0; i < n; i++) {
       x *= 1.001
     }
     console.log(x.toFixed(4))
@@ -523,7 +524,7 @@
     var r = +prompt() / 100 + 1
     var m = +prompt()
     var y = +prompt()
-    for (let i = 1; i < y; i++) {
+    for (let i = 0; i < y; i++) {
       m *= r
     }
     console.log(Math.trunc(m))
@@ -576,7 +577,7 @@
   <script xtype="x" id="ch0105/19">
     var n = +prompt()
     var s = 0
-    for (let i = 0, x, y, p; i < i; i++) {
+    for (let i = 0, x, y, p; i < n; i++) {
       x = +prompt()
       y = +prompt()
       p = +prompt()
@@ -663,7 +664,11 @@
       sevenhigh = Math.floor(i / 49)
       sevenmid = Math.floor((i - sevenhigh * 49) / 7)
       sevenlow = i % 7
-      if ((sevenlow * 81 + sevenmid * 9 + sevenhigh) == i) console.log(i)
+      if ((sevenlow * 81 + sevenmid * 9 + sevenhigh) == i) {
+        console.log(i)
+        console.log("" + sevenhigh + sevenmid + sevenlow)
+        console.log("" + sevenlow + sevenmid + sevenhigh)
+      }
     }
   </script>
   <script xtype="x" id="ch0105/26">
@@ -699,11 +704,14 @@
     if (k < 0) mark = -1
     else mark = 1
     k = Math.abs(k)
+    while (k % 10 == 0) {
+      k /= 10
+    }
     while (k > 0) {
       str += k % 10
       k = Math.trunc(k / 10)
     }
-    if (-1 * mark) str = "-" + str
+    if (mark == -1) str = "-" + str
     console.log(str)
   </script>
   <script xtype="x" id="ch0105/30">
@@ -723,20 +731,25 @@
   <script xtype="x" id="ch0105/31">
     var n = +prompt()
     var m = +prompt()
+    var str = ""
     if (m * m >= n) {
       for (let i = 1; i < Math.sqrt(m); i++) {
-        console.log(i * i)
+        if (i + 1 < Math.sqrt(m)) str += i * i + ","
+        else str += i * i
       }
+      console.log(str)
     } else {
       for (let i = 1; i <= m; i++) {
-        console.log(i * i)
+        str += i * i + ","
       }
       for (let i = m * m + 1, mark = 0; i <= n; i++) {
         for (let j = 1; j <= m; j++) {
           if (i % j == 0) mark++
         }
-        if (mark % 2 == 1) console.log(i)
+        if (mark % 2 == 1 && i < n) str += i * i + ","
+        else if (mark % 2 == 1 && i == n) str += i * i
       }
+      console.log(str)
     }
   </script>
   <script xtype="x" id="ch0105/32">

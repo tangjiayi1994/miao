@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas width="400" height="300"></canvas>
+</body>
+<script>
+  var canvas = document.querySelector('canvas')
+  canvas.style.imageRendering = 'pixelated'
+  var ctx = canvas.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+  /**
+   * YOUR TASK
+画图的题：
+画一条实线
+画一条一个实点一个空点的虚线
+画一条两个实点两个空点的虚线
+画一条三个实点两个空点的虚线
+画一条45度的斜线
+画一条跨越画布左上角和右下角的对角线
+画一个空心矩形
+画一个实心矩形
+
+   */
+</script>
+<script>
+  // YOUR CODE GOES BELOW
+  for (let i = 0; i < 400; i++) {
+    dot(i, 200, "black")
+  }
+  for (let i = 0; i < 400; i += 2) {
+    dot(i, 210, "black")
+  }
+  for (let i = 0; i < 400; i += 4) {
+    dot(i, 220, "black")
+    dot(i + 1, 220, "black")
+  }
+  for (let i = 0; i < 400; i += 5) {
+    dot(i, 230, "black")
+    dot(i + 1, 230, "black")
+    dot(i + 2, 230, "black")
+  }
+  for (let i = 0; i < 400; i++) {
+    dot(i, i, "black")
+  }
+  for (let i = 0, j = 0; i < 400 && j < 300; i++ , j += 0.75) {
+    dot(i, j, "black")
+  }
+  for (let i = 400; i > 300; i--) {
+    for (let j = 0; j < 50; j++) {
+      dot(i, j, "black")
+    }
+  }
+  for (let i = 150; i < 250; i++) {
+    for (let j = 0; j < 50; j++) {
+      if (i == 150 || i == 249) dot(i, j, "black")
+      else if (j == 0 || j == 49) dot(i, j, "black")
+    }
+  }
+  //画一个rgb色彩空间的某一面
+  for (let i = 1; i <= 255; i++) {
+    for (let j = 1, cl; j <= 255; j++) {
+      cl = "rgb(0," + i + "," + j + ")"
+      dot(i, j, cl)
+    }
+  }
+  // 画一个空心的圆
+  // 画一个实心的圆
+  // 画一个大小合适的sin(x)的图像
+</script>
+
+</html>

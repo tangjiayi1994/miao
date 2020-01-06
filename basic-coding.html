@@ -929,20 +929,231 @@
     if (mark == true || n % 7 == 0) console.log("YES")
     else console.log("NO")
   </script>
-  <!--  7: 输入一个数，输出其是否是7的倍数或各个位上是否有7（25：NO，27：YES，21：YES)
-        sort: 输入3个数，按从小到大顺序输出
-        narcissistic: 输入一个数判断其是否为水仙花数，输出"YES"/"NO"
-        narcissistics: 输出1000以内的水仙花数
-        palindrom: 输入一个数，判断其是否为一个一个回文数"YES"/"NO"
-        weekday: 输入年份与月份，输出这此年此月的第一天为星期几（0对应周日，1对应周一）
-        complete-number: 输入一个数判断其是否为完数，输出"YES"/"NO"
-        complete-numbers: 输出1000以内的完数
-        prime: 输入一个数判断其是否为素数数，输出"YES"/"NO"
-        primes: 输出100以内的素数
-        itob: 输入一个数，输出其字符串形式
-        lcf&lcm: 输入两个数，分别输出它们的最大公约数和最小公倍数
-        sqrt: 输入一个数，输出其平方根，精确到小数点后3位
- -->
+
+  <script xtype="x" id="lcf&lcm">
+    var n = +prompt()
+    var m = +prompt()
+    var last
+    function lcf(n, m) {
+      while (1) {
+        if (n < m) {
+          n = m + n
+          m = n - m
+          n = n - m
+        }
+        if (n % m == 0) break
+        last = n % m
+        n = m
+        m = last
+      }
+      console.log(last)
+    }
+    lcf(n, m)
+    console.log(n * m / last)
+  </script>
+  <script xtype="x" id="sort">
+    var a = +prompt()
+    var b = +prompt()
+    var c = +prompt()
+    if (a < b) {
+      a = a + b
+      b = a - b
+      a = a - b
+    }
+    if (b < c) {
+      b = b + c
+      c = b - c
+      b = b - c
+    }
+    if (c < a) {
+      c = c + a
+      a = c - a
+      c = c - a
+    }
+    console.log(a)
+    console.log(b)
+    console.log(c)
+  </script>
+  <script xtype="x" id="narcissistic">
+    var n = +prompt()
+    var m = n
+    var mark = 3
+    var s = 0
+    while (mark > 0) {
+      s += Math.pow(n % 10, 3)
+      n = Math.trunc(n / 10)
+      mark--
+    }
+    if (n == 0 && s == m) console.log("YES")
+    else console.log("NO")
+  </script>
+  <script xtype="x" id="narcissistics">
+    for (let i = 100; i < 1000; i++) {
+      let mark = 3, s = 0, n = i
+      while (mark > 0) {
+        s += Math.pow(n % 10, 3)
+        n = Math.trunc(n / 10)
+        mark--
+      }
+      if (s == i) console.log(i)
+    }
+  </script>
+  <script xtype="x" id="palindrom">
+    var n = +prompt()
+    var mark = n
+    var m = ""
+    while (mark > 0) {
+      m += mark % 10
+      mark = Math.trunc(mark / 10)
+    }
+    if (+m == n) console.log("YES")
+    else console.log("NO")
+  </script>
+
+  <script xtype="x" id="sqrt">
+    //二分法
+    // function sqrt(n) {
+    // var low = 0, high = n, mid = (low + high) / 2
+    // while (high - low > 0.0000000001) {
+    // if (mid * mid > n) high = mid
+    // else if (mid * mid < n) low = mid
+    // else break
+    // }
+    // console.log(mid)
+    // }
+
+    //牛顿法
+
+    var n = +prompt()
+    var k, b, x = n, y, x0
+    do {
+      y = x * x - n
+      k = 2 * x
+      b = y - k * x
+      x0 = -b / k
+      x = x0
+    } while (Math.abs(x0 * x0 - n) > 0.0000000000001);
+    console.log(x0)
+
+  </script>
+  <!--  
+          complete-numbers: 输出1000以内的完数
+          prime: 输入一个数判断其是否为素数数，输出"YES"/"NO"
+          primes: 输出100以内的素数
+          itob: 输入一个数，输出其字符串形式
+   -->
+  <script xtype="x" id="weekday">
+    // weekday: 输入年份与月份，输出这此年此月的第一天为星期几（0对应周日，1对应周一）
+    var year = +prompt()
+    var month = +prompt()
+    var day = 1//后面只按月增加已经度过的月份的天数，所求月的第一天当天也需要加一天，所以初始为 1
+    var da//指定的那个月的第一天是一个周期（七天）里的第几天
+    for (let i = 1970; i < year; i++) {
+      //只计算已经完全度过的年的天数，没完全度过的后面算
+      if ((i % 100 == 0 && i % 400 == 0) || (i % 4 == 0 && i % 100 != 0) || (i % 3200 == 0 && i % 172800 == 0)) day++
+      //每年加365天，闰年时额外加一天
+      day += 365
+    }
+    switch (month) {
+      case 12:
+        day += 30
+      case 11:
+        day += 31
+      case 10:
+        day += 30
+      case 9:
+        day += 31
+      case 8:
+        day += 31
+      case 7:
+        day += 30
+      case 6:
+        day += 31
+      case 5:
+        day += 30
+      case 4:
+        day += 31
+      case 3:
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 100 == 0 && year % 400 == 0) || (year % 3200 == 0 && year % 172800 == 0)) day++
+        //已度过的2月可能是闰年的闰月，所以看一下当前这一年也就是year是不是闰年，如果是闰年，day需要额外加一天
+        day += 28
+      //1月31天固定，2月至少28天，闰年时29天，多加那一天在上一行判断与添加
+      case 2:
+        day += 31
+      //加上上个月的天数，后面一样
+      case 1:
+      //所求为 某年某月第一天，所以第一个月完全没有已度过的天数，只有第一天当天算，已经在day变量初始化时为 1 了
+    }
+    da = day % 7
+    da += 3//第一年第一个月第一天为周六，第一天当天da为 1 ，所以日期加 5 ，因为周几和da本来表示的一个周期内的第几天相差数量是固定的
+    da %= 7//再一次模 7 ，以防之前加 5 后超出 7
+    console.log(da)
+  </script>
+  <script xtype="x" id="complete-number">
+    var n = +prompt()
+    var sq = Math.sqrt(n)
+    var s = 1
+    for (let i = 2; i <= sq; i++) {
+      if (n % i == 0) {
+        s += i
+        s += n / i
+      }
+    }
+    if (s == n) console.log("YES")
+    else console.log("NO")
+  </script>
+  <script xtype="x" id="complete-numbers">
+    for (let i = 1; i < 1000; i++) {
+      isCnum(i)
+    }
+    function isCnum(n) {
+      var sq = Math.sqrt(n)
+      var s = 1
+      for (let i = 2; i <= sq; i++) {
+        if (n % i == 0) {
+          s += i
+          s += n / i
+        }
+      }
+      if (s == n) console.log(n)
+    }
+  </script>
+  <script xtype="x" id="prime">
+    var n = +prompt()
+    var sq = Math.sqrt(n)
+    var mark = true
+    for (let i = 2; i <= sq; i++) {
+      if (n % i == 0) {
+        mark = false
+        break
+      }
+    }
+    if (mark) console.log("YES")
+    else console.log("NO")
+  </script>
+  <script xtype="x" id="primes">
+    function pri(n) {
+      var sq = Math.sqrt(n)
+      var mark = true
+      for (let i = 2; i <= sq; i++) {
+        if (n % i == 0) {
+          mark = false
+          break
+        }
+      }
+      if (mark) console.log(n)
+    }
+    for (let i = 2; i < 100; i++) {
+      pri(i)
+    }
+  </script>
+  <script xtype="x" id="itob">
+    var n = prompt()
+    console.log(n)
+  </script>
+  <!--  
+            itob: 输入一个数，输出其字符串形式
+     -->
 </body>
 
 </html>

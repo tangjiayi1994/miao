@@ -4,7 +4,7 @@ var tangjiayi1994 = {
   },
   difference: function (array, values = []) {
     var map = {}
-    if (arguments.length > 2) values = arguments.reduce((res, it) => {
+    if (arguments.length > 2) values = Array.from(arguments).reduce((res, it) => {
       return res.concat(it), res
     }, [])
     if (values.length == 0) return array.slice()
